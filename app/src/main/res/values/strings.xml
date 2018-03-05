@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Audio Bookshelf</string>
+    <string name="shelved">Shelved</string>
+    <string name="currently_listening">Currently listening</string>
+    <string name="archive">Archive</string>
+    <string name="book_image">Book Cover</string>
+</resources>

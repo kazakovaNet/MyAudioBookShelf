@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/vertical_margin_8"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_padding_4">
+
+    <ImageView
+        android:id="@+id/picture_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/book_image"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/horizontal_margin_8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            style="@style/ListItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Gradle for Android" />
+
+        <TextView
+            android:id="@+id/author_text_view"
+            style="@style/ListItemAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Kevin Pelgrims" />
+    </LinearLayout>
+
+</LinearLayout>

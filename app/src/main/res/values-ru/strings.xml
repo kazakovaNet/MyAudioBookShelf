@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shelved">Отложенные</string>
+    <string name="currently_listening">Слушаю сейчас</string>
+    <string name="archive">Архив</string>
+    <string name="app_name">Моя аудио-книжная полка</string>
+    <string name="book_image">Обложка книги</string>
+</resources>
