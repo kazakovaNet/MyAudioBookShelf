@@ -5,4 +5,6 @@
     <string name="archive">Архив</string>
     <string name="app_name">Моя аудио-книжная полка</string>
     <string name="book_image">Обложка книги</string>
+    <string name="detail_title">Об аудио-книге</string>
+    <string name="play">Слушать</string>
 </resources>

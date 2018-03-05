@@ -25,7 +25,10 @@ public class ShelvedActivity extends AppCompatActivity {
         // Create a list of currently listening audio-books
         ArrayList<AudioBook> books = new ArrayList<>();
         books.add(new AudioBook("Dmitry Jemerov, Svetlana Isakova", "Kotlin in Action",
-                2017, "Computers & Technology", R.drawable.pic_4));
+                2017, "Computers & Technology", R.drawable.pic_4,
+                "Kotlin in Action guides experienced Java developers from the language " +
+                        "basics of Kotlin all the way through building applications to run on the " +
+                        "JVM and Android devices. Foreword by Andrey Breslav, Lead Designer of Kotlin."));
 
         AudioBookAdapter bookAdapter = new AudioBookAdapter(this, books);
 

@@ -4,4 +4,6 @@
     <string name="currently_listening">Currently listening</string>
     <string name="archive">Archive</string>
     <string name="book_image">Book Cover</string>
+    <string name="detail_title">About audio-book</string>
+    <string name="play">Play</string>
 </resources>

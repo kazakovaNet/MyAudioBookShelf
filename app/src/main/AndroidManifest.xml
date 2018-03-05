@@ -25,7 +25,9 @@
         <activity
             android:name=".activity.ArchiveActivity"
             android:label="@string/archive" />
-        <activity android:name=".activity.DetailActivity"></activity>
+        <activity
+            android:name=".activity.DetailActivity"
+            android:label="@string/detail_title" />
     </application>
 
 </manifest>

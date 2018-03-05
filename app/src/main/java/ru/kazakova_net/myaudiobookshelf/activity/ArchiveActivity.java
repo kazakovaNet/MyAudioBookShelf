@@ -26,7 +26,11 @@ public class ArchiveActivity extends AppCompatActivity {
         ArrayList<AudioBook> books = new ArrayList<>();
         books.add(new AudioBook("Stephen R. Covey",
                 "The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change ",
-                2013, "Personal effectiveness", R.drawable.pic_3));
+                2013, "Personal effectiveness", R.drawable.pic_3,
+                "One of the most inspiring and impactful books ever written, " +
+                        "The 7 Habits of Highly Effective People has captivated readers for 25 years. " +
+                        "It has transformed the lives of Presidents and CEOs, educators and parents— " +
+                        "in short, millions of people of all ages and occupations."));
 
         AudioBookAdapter bookAdapter = new AudioBookAdapter(this, books);
 
