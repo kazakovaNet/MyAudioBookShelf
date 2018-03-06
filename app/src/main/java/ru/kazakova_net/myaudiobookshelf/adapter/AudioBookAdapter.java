@@ -1,4 +1,4 @@
-package ru.kazakova_net.myaudiobookshelf.model;
+package ru.kazakova_net.myaudiobookshelf.adapter;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import ru.kazakova_net.myaudiobookshelf.R;
+import ru.kazakova_net.myaudiobookshelf.model.AudioBook;
 
 public class AudioBookAdapter extends ArrayAdapter<AudioBook> {
     private static final String TAG = "MyLog - " + AudioBook.class.getSimpleName();

@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import ru.kazakova_net.myaudiobookshelf.model.AudioBook;
-import ru.kazakova_net.myaudiobookshelf.model.AudioBookAdapter;
+import ru.kazakova_net.myaudiobookshelf.adapter.AudioBookAdapter;
 import ru.kazakova_net.myaudiobookshelf.R;
 
 public class ShelvedActivity extends AppCompatActivity {

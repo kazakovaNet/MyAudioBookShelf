@@ -5,8 +5,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-import ru.kazakova_net.myaudiobookshelf.activity.DetailActivity;
-
 public class AudioBook implements Parcelable {
     private static final String AUTHOR = "author";
     private static final String TITLE = "title";
