@@ -31,4 +31,79 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="DetailViewPicture">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_8</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_8</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_8</item>
+    </style>
+
+    <style name="DetailViewTitle">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_8</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_8</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_16</item>
+    </style>
+
+    <style name="DetailViewAuthor">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_8</item>
+    </style>
+
+    <style name="DetailViewGenre">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_8</item>
+    </style>
+
+    <style name="DetailViewYear">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_8</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_8</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_8</item>
+    </style>
+
+    <style name="DetailViewDescription">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_16</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DetailViewPlay">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin_16</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_32</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_margin_32</item>
+        <item name="android:background">#f57f17</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingBottom">@dimen/vertical_margin_16</item>
+        <item name="android:paddingTop">@dimen/vertical_margin_16</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
 </resources>

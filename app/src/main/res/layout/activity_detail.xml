@@ -3,21 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context="ru.kazakova_net.myaudiobookshelf.activity.DetailActivity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/picture_image_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            style="@style/DetailViewPicture"
             android:contentDescription="@string/book_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,15 +21,7 @@
 
         <TextView
             android:id="@+id/title_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            style="@style/DetailViewTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/picture_image_view"
@@ -42,13 +29,7 @@
 
         <TextView
             android:id="@+id/author_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:textAlignment="center"
-            android:textSize="18sp"
+            style="@style/DetailViewAuthor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_text_view"
@@ -56,12 +37,7 @@
 
         <TextView
             android:id="@+id/genre_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:textAlignment="center"
+            style="@style/DetailViewGenre"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,12 +46,7 @@
 
         <TextView
             android:id="@+id/year_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textAlignment="center"
+            style="@style/DetailViewYear"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,15 +55,7 @@
 
         <TextView
             android:id="@+id/description_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="18sp"
+            style="@style/DetailViewDescription"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/year_text_view"
@@ -100,21 +63,13 @@
 
         <TextView
             android:id="@+id/play_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="#f57f17"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingBottom="@dimen/vertical_margin_16"
-            android:paddingTop="@dimen/vertical_margin_16"
+            style="@style/DetailViewPlay"
             android:text="@string/play"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description_text_view"
-            tools:text="Play" />
+            app:layout_constraintTop_toBottomOf="@+id/description_text_view" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
