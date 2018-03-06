@@ -7,4 +7,6 @@
     <string name="book_image">Обложка книги</string>
     <string name="detail_title">Об аудио-книге</string>
     <string name="play">Слушать</string>
+    <string name="main_menu_item_bg_descr">Фон пункта главного меню</string>
+    <string name="start_play_message">Запущено воспроизведение!</string>
 </resources>

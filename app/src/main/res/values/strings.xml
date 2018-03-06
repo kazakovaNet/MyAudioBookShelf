@@ -6,4 +6,6 @@
     <string name="book_image">Book Cover</string>
     <string name="detail_title">About audio-book</string>
     <string name="play">Play</string>
+    <string name="main_menu_item_bg_descr">Background main menu item</string>
+    <string name="start_play_message">Audio-book start play!</string>
 </resources>

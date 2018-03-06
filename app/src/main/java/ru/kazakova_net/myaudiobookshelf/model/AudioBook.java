@@ -3,6 +3,9 @@ package ru.kazakova_net.myaudiobookshelf.model;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+
+import ru.kazakova_net.myaudiobookshelf.activity.DetailActivity;
 
 public class AudioBook implements Parcelable {
     private static final String AUTHOR = "author";
@@ -11,7 +14,8 @@ public class AudioBook implements Parcelable {
     private static final String GENRE = "genre";
     public static final String BOOK = "book";
     private static final String IMAGE_RESOURCE_ID = "imageResourceId";
-    public static final String DESCRIPTION = "description";
+    private static final String DESCRIPTION = "description";
+    private static final String TAG = "MyLog - " + AudioBook.class.getSimpleName();
 
     private String author;
     private String title;
@@ -27,8 +31,8 @@ public class AudioBook implements Parcelable {
      * @param title           is the title of an audio-book
      * @param year            is the year of writing an audio-book
      * @param genre           is a genre of audio-book
-     * @param imageResourceId
-     * @param description
+     * @param imageResourceId is an id of image resource
+     * @param description     is a short description of an audio-book
      */
     public AudioBook(String author, String title, long year, String genre, int imageResourceId, String description) {
         this.author = author;
@@ -37,6 +41,8 @@ public class AudioBook implements Parcelable {
         this.genre = genre;
         this.imageResourceId = imageResourceId;
         this.description = description;
+
+        Log.d(TAG, "new AudioBook: title = " + this.title);
     }
 
     private AudioBook(Parcel parcel) {

@@ -1,5 +1,6 @@
 package ru.kazakova_net.myaudiobookshelf.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,13 +47,20 @@ public class DetailActivity extends AppCompatActivity {
         TextView descriptionTextView = findViewById(R.id.description_text_view);
         descriptionTextView.setText(book.getDescription());
 
-        Button playButton = findViewById(R.id.play_button);
-        playButton.setOnClickListener(new View.OnClickListener() {
+        TextView playTextView = findViewById(R.id.play_text_view);
+        playTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DetailActivity.this, "Audio-book start play!",
+                Toast.makeText(DetailActivity.this, R.string.start_play_message,
                         Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public static Intent getDetailIntent(AudioBook book, Context packageContext) {
+        Intent detailIntent = new Intent(packageContext, DetailActivity.class);
+        detailIntent.putExtra(AudioBook.BOOK, book);
+
+        return detailIntent;
     }
 }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/vertical_margin_8"
     android:orientation="horizontal"
-    android:padding="@dimen/common_padding_4">
+    android:padding="@dimen/common_padding_8">
 
     <ImageView
         android:id="@+id/picture_image_view"
@@ -17,7 +17,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/horizontal_margin_8"
+        android:layout_marginStart="@dimen/horizontal_margin_8"
         android:orientation="vertical">
 
         <TextView
@@ -25,6 +25,7 @@
             style="@style/ListItemTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             tools:text="Gradle for Android" />
 
         <TextView

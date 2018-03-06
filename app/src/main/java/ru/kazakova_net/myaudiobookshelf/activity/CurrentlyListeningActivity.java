@@ -35,11 +35,15 @@ public class CurrentlyListeningActivity extends AppCompatActivity {
                         "up the entire build process."));
         books.add(new AudioBook("Ronan Schwarz, Phil Dutson, James Steele, Nelson To",
                 "The Android Developer's Cookbook: Building Applications with the Android SDK " +
-                        "(Developer's Library)",2017, "Computers & Technology",
+                        "(Developer's Library)", 2017, "Computers & Technology",
                 R.drawable.pic_2, "Do you want to get started building apps for Android, " +
                 "today’s number one mobile platform? Are you already building Android apps but want " +
                 "to get better at it? The Android ™ Developer’s Cookbook, Second Edition, brings " +
                 "together all the expert guidance and code you’ll need."));
+        books.add(new AudioBook("Tara Westover", "Educated: A Memoir", 2018,
+                "Education", R.drawable.pic_7, "Educated is an account of the " +
+                "struggle for self-invention. It is a tale of fierce family loyalty, and of the " +
+                "grief that comes from severing one’s closest ties."));
 
         AudioBookAdapter bookAdapter = new AudioBookAdapter(this, books);
 
@@ -53,10 +57,7 @@ public class CurrentlyListeningActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onItemClick: title = " + book.getTitle());
 
-                Intent detailIntent = new Intent(CurrentlyListeningActivity.this, DetailActivity.class);
-                detailIntent.putExtra(AudioBook.BOOK, book);
-
-                startActivity(detailIntent);
+                startActivity(DetailActivity.getDetailIntent(book, CurrentlyListeningActivity.this));
             }
         });
     }

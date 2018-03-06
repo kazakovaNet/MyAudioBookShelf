@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import ru.kazakova_net.myaudiobookshelf.R;
 
@@ -20,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Button currentlyListeningBtn = findViewById(R.id.currently_listening_button);
-        currentlyListeningBtn.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout currentlyListeningTextView = findViewById(R.id.currently_listening_item);
+        currentlyListeningTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onCurrentlyListeningBtnClick");
@@ -32,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button shelvedBtn = findViewById(R.id.shelved_button);
-        shelvedBtn.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout shelvedTextView = findViewById(R.id.shelved_item);
+        shelvedTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onShelvedBtnClick");
@@ -44,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button archiveBtn = findViewById(R.id.archive_button);
-        archiveBtn.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout archiveTextView = findViewById(R.id.archive_item);
+        archiveTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onArchiveBtnClick");
