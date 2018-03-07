@@ -12,4 +12,9 @@
 
     <dimen name="picture_image_view_width">100dp</dimen>
     <dimen name="picture_image_view_height">100dp</dimen>
+
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
 </resources>
