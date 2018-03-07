@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 import ru.kazakova_net.myaudiobookshelf.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MyLog - " + MainActivity.class.getSimpleName();
 
     @Override
@@ -21,38 +21,38 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RelativeLayout currentlyListeningTextView = findViewById(R.id.currently_listening_item);
-        currentlyListeningTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        currentlyListeningTextView.setOnClickListener(this);
+
+        RelativeLayout shelvedTextView = findViewById(R.id.shelved_item);
+        shelvedTextView.setOnClickListener(this);
+
+        RelativeLayout archiveTextView = findViewById(R.id.archive_item);
+        archiveTextView.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.currently_listening_item:
                 Log.d(TAG, "onCurrentlyListeningBtnClick");
 
                 Intent currentlyListeningIntent = new Intent(
                         MainActivity.this, CurrentlyListeningActivity.class);
                 startActivity(currentlyListeningIntent);
-            }
-        });
-
-        RelativeLayout shelvedTextView = findViewById(R.id.shelved_item);
-        shelvedTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                break;
+            case R.id.shelved_item:
                 Log.d(TAG, "onShelvedBtnClick");
 
                 Intent shelvedIntent = new Intent(
                         MainActivity.this, ShelvedActivity.class);
                 startActivity(shelvedIntent);
-            }
-        });
-
-        RelativeLayout archiveTextView = findViewById(R.id.archive_item);
-        archiveTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                break;
+            case R.id.archive_item:
                 Log.d(TAG, "onArchiveBtnClick");
 
                 Intent archiveIntent = new Intent(MainActivity.this, ArchiveActivity.class);
                 startActivity(archiveIntent);
-            }
-        });
+                break;
+        }
     }
 }
