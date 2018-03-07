@@ -1,8 +1,10 @@
 package ru.kazakova_net.myaudiobookshelf.activity;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -24,15 +26,20 @@ public class ArchiveActivity extends AppCompatActivity {
 
         setContentView(R.layout.book_list);
 
+        // This adds a left-facing caret alongside the app icon and enables it
+        // as an action button such that when the user presses it, your activity receives
+        // a call to onOptionsItemSelected().
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         // Create a list of currently listening audio-books
         ArrayList<AudioBook> books = new ArrayList<>();
-        books.add(new AudioBook("Stephen R. Covey",
-                "The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change ",
-                2013, "Personal effectiveness", R.drawable.pic_3,
-                "One of the most inspiring and impactful books ever written, " +
-                        "The 7 Habits of Highly Effective People has captivated readers for 25 years. " +
-                        "It has transformed the lives of Presidents and CEOs, educators and parents— " +
-                        "in short, millions of people of all ages and occupations."));
+        books.add(new AudioBook(
+                getString(R.string.author_1),
+                getString(R.string.title_1),
+                2013,
+                getString(R.string.genre_1),
+                R.drawable.pic_3,
+                getString(R.string.description_1)));
 
         AudioBookAdapter bookAdapter = new AudioBookAdapter(this, books);
 
@@ -49,5 +56,19 @@ public class ArchiveActivity extends AppCompatActivity {
                 startActivity(DetailActivity.getDetailIntent(book, ArchiveActivity.this));
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, "onOptionsItemSelected: id = " + item.getItemId());
+
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- The main/home activity (it has no parent activity) -->
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,15 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- A child of the main activity -->
         <activity
             android:name=".activity.ShelvedActivity"
-            android:label="@string/shelved" />
+            android:label="@string/shelved"
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.CurrentlyListeningActivity"
-            android:label="@string/currently_listening" />
+            android:label="@string/currently_listening"
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.ArchiveActivity"
-            android:label="@string/archive" />
+            android:label="@string/archive"
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.DetailActivity"
             android:label="@string/detail_title" />

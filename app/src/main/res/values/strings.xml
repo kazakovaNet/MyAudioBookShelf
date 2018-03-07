@@ -8,4 +8,37 @@
     <string name="play">Play</string>
     <string name="main_menu_item_bg_descr">Background main menu item</string>
     <string name="start_play_message">Audio-book start play!</string>
+    <string name="home">Go at home</string>
+
+    <string name="author_1">Stephen R. Covey</string>
+    <string name="title_1">The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change</string>
+    <string name="genre_1">Personal effectiveness</string>
+    <string name="description_1">One of the most inspiring and impactful books ever written, The 7 Habits of Highly Effective People has captivated readers for 25 years. It has transformed the lives of Presidents and CEOs, educators and parents — in short, millions of people of all ages and occupations.</string>
+
+    <string name="author_2">Kevin Pelgrims</string>
+    <string name="title_2">Gradle for Android</string>
+    <string name="genre_2"><![CDATA[Computers & Technology]]></string>
+    <string name="description_2">Gradle is an open source build automation system that introduces a Groovy-based domain-specific language (DSL) to configure projects. Using Gradle makes it easy for Android developers to manage dependencies and set up the entire build process.</string>
+
+    <string name="author_3">Ronan Schwarz, Phil Dutson, James Steele, Nelson To</string>
+    <string name="title_3">The Android Developer\'s Cookbook: Building Applications with the Android SDK (Developer\'s Library)</string>
+    <string name="description_3">Do you want to get started building apps for Android, today’s number one mobile platform? Are you already building Android apps but want to get better at it? The Android ™ Developer’s Cookbook, Second Edition, brings together all the expert guidance and code you’ll need.</string>
+
+    <string name="author_4">Tara Westover</string>
+    <string name="title_4">Educated: A Memoir</string>
+    <string name="genre_3">Education</string>
+    <string name="description_4">Educated is an account of the struggle for self-invention. It is a tale of fierce family loyalty, and of the grief that comes from severing one’s closest ties.</string>
+
+    <string name="author_5">Dmitry Jemerov, Svetlana Isakova</string>
+    <string name="title_5">Kotlin in Action</string>
+    <string name="description_5">Kotlin in Action guides experienced Java developers from the language basics of Kotlin all the way through building applications to run on the JVM and Android devices. Foreword by Andrey Breslav, Lead Designer of Kotlin.</string>
+
+    <string name="author_6">Kyle Mew</string>
+    <string name="title_6">Android Design Patterns and Best Practices</string>
+    <string name="description_6">Are you an Android developer with some experience under your belt? Are you wondering how the experts create efficient and good-looking apps? Then your wait will end with this book!</string>
+
+    <string name="author_7">William Shakespeare</string>
+    <string name="title_7">A Midsummer Night\'s Dream</string>
+    <string name="genre_4">Classics</string>
+    <string name="description_7">A Midsummer Night’s Dream is a comedy written by William Shakespeare between 1590 and 1596. It is one of his most played pieces. The events of the play take place in and around Athens in ancient Greece and include scenes from a fairytale world inhabited by characters from Greek mythology.</string>
 </resources>

@@ -3,6 +3,7 @@ package ru.kazakova_net.myaudiobookshelf.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -52,6 +53,15 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(DetailActivity.this, R.string.start_play_message,
                         Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        TextView homeTextView = findViewById(R.id.home_text_view);
+        homeTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(DetailActivity.this, MainActivity.class);
+                startActivity(mainIntent);
             }
         });
     }

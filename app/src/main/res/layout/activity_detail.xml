@@ -65,11 +65,20 @@
             android:id="@+id/play_text_view"
             style="@style/DetailViewPlay"
             android:text="@string/play"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description_text_view" />
+
+        <TextView
+            android:id="@+id/home_text_view"
+            style="@style/DetailViewHome"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/play_text_view" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

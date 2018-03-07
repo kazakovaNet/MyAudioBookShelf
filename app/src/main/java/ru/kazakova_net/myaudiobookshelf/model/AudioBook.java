@@ -52,6 +52,8 @@ public class AudioBook implements Parcelable {
         this.genre = in.getString(GENRE);
         this.imageResourceId = in.getInt(IMAGE_RESOURCE_ID);
         this.description = in.getString(DESCRIPTION);
+
+        Log.d(TAG, "new AudioBook from Parcel: title = " + this.title);
     }
 
     public String getAuthor() {
@@ -85,6 +87,8 @@ public class AudioBook implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        Log.d(TAG, "writeToParcel: title = " + this.title);
+
         Bundle bundle = new Bundle();
 
         bundle.putString(AUTHOR, this.author);

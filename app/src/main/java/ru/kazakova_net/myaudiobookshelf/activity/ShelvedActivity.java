@@ -1,8 +1,10 @@
 package ru.kazakova_net.myaudiobookshelf.activity;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -24,24 +26,34 @@ public class ShelvedActivity extends AppCompatActivity {
 
         setContentView(R.layout.book_list);
 
+        // This adds a left-facing caret alongside the app icon and enables it
+        // as an action button such that when the user presses it, your activity receives
+        // a call to onOptionsItemSelected().
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         // Create a list of currently listening audio-books
         ArrayList<AudioBook> books = new ArrayList<>();
-        books.add(new AudioBook("Dmitry Jemerov, Svetlana Isakova", "Kotlin in Action",
-                2017, "Computers & Technology", R.drawable.pic_4,
-                "Kotlin in Action guides experienced Java developers from the language " +
-                        "basics of Kotlin all the way through building applications to run on the " +
-                        "JVM and Android devices. Foreword by Andrey Breslav, Lead Designer of Kotlin."));
-        books.add(new AudioBook("Kyle Mew", "Android Design Patterns and Best Practices",
-                2016, "Programming", R.drawable.pic_5,
-                "Are you an Android developer with some experience under your belt? Are " +
-                        "you wondering how the experts create efficient and good-looking apps? " +
-                        "Then your wait will end with this book!"));
-        books.add(new AudioBook("William Shakespeare", "A Midsummer Night's Dream",
-                2018, "Classics", R.drawable.pic_6,
-                "A Midsummer Night’s Dream is a comedy written by William Shakespeare " +
-                        "between 1590 and 1596. It is one of his most played pieces. The events " +
-                        "of the play take place in and around Athens in ancient Greece and include " +
-                        "scenes from a fairytale world inhabited by characters from Greek mythology."));
+        books.add(new AudioBook(
+                getString(R.string.author_5),
+                getString(R.string.title_5),
+                2017,
+                getString(R.string.genre_2),
+                R.drawable.pic_4,
+                getString(R.string.description_5)));
+        books.add(new AudioBook(
+                getString(R.string.author_6),
+                getString(R.string.title_6),
+                2016,
+                getString(R.string.genre_2),
+                R.drawable.pic_5,
+                getString(R.string.description_6)));
+        books.add(new AudioBook(
+                getString(R.string.author_7),
+                getString(R.string.title_7),
+                2018,
+                getString(R.string.genre_4),
+                R.drawable.pic_6,
+                getString(R.string.description_7)));
 
         AudioBookAdapter bookAdapter = new AudioBookAdapter(this, books);
 
@@ -58,5 +70,19 @@ public class ShelvedActivity extends AppCompatActivity {
                 startActivity(DetailActivity.getDetailIntent(book, ShelvedActivity.this));
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, "onOptionsItemSelected: id = " + item.getItemId());
+
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -71,7 +71,7 @@ public class AudioBookAdapter extends ArrayAdapter<AudioBook> {
         }
 
         if (book != null) {
-            Log.d(TAG, "getView: title = " + book.getTitle() + ", author = " + book.getAuthor());
+            Log.d(TAG, "getView: title = " + book.getTitle());
         }
 
         return listItemView;
