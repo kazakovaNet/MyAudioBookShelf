@@ -14,7 +14,7 @@ import android.widget.Toast;
 import ru.kazakova_net.myaudiobookshelf.R;
 import ru.kazakova_net.myaudiobookshelf.model.AudioBook;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MyLog - " + DetailActivity.class.getSimpleName();
 
     @Override
@@ -48,22 +48,10 @@ public class DetailActivity extends AppCompatActivity {
         descriptionTextView.setText(book.getDescription());
 
         TextView playTextView = findViewById(R.id.play_text_view);
-        playTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(DetailActivity.this, R.string.start_play_message,
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+        playTextView.setOnClickListener(this);
 
         TextView homeTextView = findViewById(R.id.home_text_view);
-        homeTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mainIntent = new Intent(DetailActivity.this, MainActivity.class);
-                startActivity(mainIntent);
-            }
-        });
+        homeTextView.setOnClickListener(this);
     }
 
     public static Intent getDetailIntent(AudioBook book, Context packageContext) {
@@ -71,5 +59,19 @@ public class DetailActivity extends AppCompatActivity {
         detailIntent.putExtra(AudioBook.BOOK, book);
 
         return detailIntent;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.play_text_view:
+                Toast.makeText(DetailActivity.this, R.string.start_play_message,
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.home_text_view:
+                Intent mainIntent = new Intent(DetailActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+                break;
+        }
     }
 }
